@@ -72,7 +72,7 @@
 			%% certificate, specify the full path to the
 			%% file and uncomment this line:
 			%%
-			%%{certfile, "/path/to/ssl.pem"}, starttls,
+			{certfile, "/home/vagrant/ejabberd.pem"}, starttls,
 
 			{access, c2s},
 			{shaper, c2s_shaper},
@@ -320,7 +320,7 @@
 %% You can put here as many accounts as you want.
 %%
 %%{acl, admin, {user, "aleksey", "localhost"}}.
-%%{acl, admin, {user, "ermine", "example.org"}}.
+{acl, admin, {user, "root", "localhost"}}.
 
 %%
 %% Blocked users
@@ -417,7 +417,7 @@
 %%
 %% language: Default language used for server messages.
 %%
-{language, <%= node[:jabber][:global][:language] %>}.
+{language, "<%= node[:jabber][:global][:language] %>"}.
 
 %%
 %% Set a different default language in a virtual host.
