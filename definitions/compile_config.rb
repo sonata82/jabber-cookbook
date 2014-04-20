@@ -1,7 +1,7 @@
 define :jabber_compile_config do
 	directory "/etc/ejabberd" do
 		owner 'root'
-		group 'jabber'
+		group 'ejabberd'
 		mode '0750'
 		recursive true
 	end
@@ -9,14 +9,14 @@ define :jabber_compile_config do
 	template "/etc/ejabberd/ejabberd.cfg" do
 		source "ejabberd.cfg.erb"
 		owner 'root'
-		group 'jabber'
+		group 'ejabberd'
 		mode '0640'
 	end
 
 	template "/etc/ejabberd/ejabberdctl.cfg" do
 		source "ejabberdctl.cfg.erb"
 		owner 'root'
-		group 'jabber'
+		group 'ejabberd'
 		mode '0640'
 	end
 
